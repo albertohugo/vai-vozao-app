@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/tabelaLayout">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:background="@color/bk_header_tabela"
+        android:gravity="center">
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="@dimen/size_text_tabela"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/classificacao" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Equipe"
+            android:textStyle="bold"
+            android:textSize="@dimen/size_text_tabela"
+            android:id="@+id/clube" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_text_tabela"
+            android:text="P"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:id="@+id/pontos" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_text_tabela"
+            android:text="J"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:id="@+id/jogos" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_text_tabela"
+            android:text="E"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:id="@+id/empates" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_text_tabela"
+            android:text="D"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:id="@+id/derrotas" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_text_tabela"
+            android:text="S"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:id="@+id/saldo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_text_tabela"
+            android:text="V"
+            android:textStyle="bold"
+            android:paddingRight="10dp"
+            android:id="@+id/vitorias" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+</LinearLayout>

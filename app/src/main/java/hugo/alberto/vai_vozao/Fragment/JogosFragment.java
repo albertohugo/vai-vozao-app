@@ -247,7 +247,16 @@ public class JogosFragment extends Fragment {
             placar2_last.setText(placar_oficial_visitante_last);
         }
 
-        informacoes_last.setText(dataformatada_last + " " + estadio_last + " " + hora_last);
+        if(dataformatada_last==null){
+            informacoes_current.setText("");
+            versus_last.setText("");
+        }
+        else{
+            informacoes_last.setText(dataformatada_last + " " + estadio_last + " " + hora_last);
+            versus_last.setText(" X ");
+        }
+
+
         Picasso.with(getActivity()).load(escudo_oficial_mandante_last).into(imageTime1_last);
         Picasso.with(getActivity()).load(escudo_oficial_visitante_last).into(imageTime2_last);
         versus_last.setText(" X ");
@@ -265,8 +274,14 @@ public class JogosFragment extends Fragment {
             placar1_next.setText(placar_oficial_mandante_next);
             placar2_next.setText(placar_oficial_visitante_next);
         }
+        if(dataformatada_next==null){
+            informacoes_current.setText("");
+        }
+        else{
+            informacoes_next.setText(dataformatada_next+ " "+estadio_next+ " "+hora_next);
+        }
 
-        informacoes_next.setText(dataformatada_next+ " "+estadio_next+ " "+hora_next);
+
         Picasso.with(getActivity()).load(escudo_oficial_mandante_next).into(imageTime1_next);
         Picasso.with(getActivity()).load(escudo_oficial_visitante_next).into(imageTime2_next);
         versus_next.setText(" X ");
@@ -285,7 +300,13 @@ public class JogosFragment extends Fragment {
             placar2_current.setText(placar_oficial_visitante_current);
         }
 
-        informacoes_current.setText(dataformatada_current + " " + estadio_current + " " + hora_current);
+        if(dataformatada_current==null){
+            informacoes_current.setText("");
+        }
+        else{
+            informacoes_current.setText(dataformatada_current + " " + estadio_current + " " + hora_current);
+        }
+
         Picasso.with(getActivity()).load(escudo_oficial_mandante_current).into(imageTime1_current);
         Picasso.with(getActivity()).load(escudo_oficial_visitante_current).into(imageTime2_current);
         versus_current.setText(" X ");

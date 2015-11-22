@@ -39,7 +39,7 @@ public class TabelaFragment extends Fragment {
     private ProgressDialog pDialog;
     private JsonParseHandler jsonParseHandler;
 
-    private static String url = "http://centraldejogos.lancenet.com.br/api/classificacao/brasileiro-serie-b-2015/";
+    private static String url = "http://centraldejogos.lance.com.br/api/classificacao/brasileiro-serie-b-2015/";
 
     private static final String TAG_CLASSIFICACAO= "posicao";
     private static final String TAG_CLUBE = "nome_equipe";

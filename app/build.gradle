@@ -5,10 +5,10 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "ah2.mobile.vai_vozao"
+        applicationId "hugo.alberto.vai_vozao"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 4
+        versionCode 3
         versionName "1.3"
     }
     buildTypes {

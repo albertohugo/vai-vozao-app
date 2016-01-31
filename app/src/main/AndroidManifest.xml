@@ -39,17 +39,27 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="APPLICATION ID" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="CLIENT KEY" />
         <activity
-            android:name="hugo.alberto.vai_vozao.MainActivity"
+            android:name="hugo.alberto.vai_vozao.Activity.SplashScreenActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="hugo.alberto.vai_vozao.Activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 

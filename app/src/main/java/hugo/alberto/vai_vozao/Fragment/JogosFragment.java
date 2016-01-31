@@ -135,6 +135,7 @@ public class JogosFragment extends Fragment {
             AdView mAdView_tabela = (AdView) rootView.findViewById(R.id.adView);
             AdRequest adRequest_tabela = new AdRequest.Builder().build();
             mAdView_tabela.loadAd(adRequest_tabela);
+
         } else {
 
             rootView = inflater.inflate(R.layout.no_connection_tab, container, false);
@@ -247,7 +248,7 @@ public class JogosFragment extends Fragment {
             placar2_last.setText(placar_oficial_visitante_last);
         }
 
-        if(dataformatada_last==null){
+        if(dataformatada_last==null ){//&&estadio_last=="null"&&hora_last=="null"){
             informacoes_last.setText("");
             versus_last.setText("");
         }
@@ -259,7 +260,6 @@ public class JogosFragment extends Fragment {
 
         Picasso.with(getActivity()).load(escudo_oficial_mandante_last).into(imageTime1_last);
         Picasso.with(getActivity()).load(escudo_oficial_visitante_last).into(imageTime2_last);
-        versus_last.setText(" X ");
     }
 
     private void FillNextMatch() {
@@ -274,17 +274,20 @@ public class JogosFragment extends Fragment {
             placar1_next.setText(placar_oficial_mandante_next);
             placar2_next.setText(placar_oficial_visitante_next);
         }
-        if(dataformatada_next==null){
+        if(dataformatada_next==null  ){//&&estadio_next=="null"&&hora_next=="null"){
             informacoes_next.setText("");
+            versus_next.setText("");
         }
         else{
+
             informacoes_next.setText(dataformatada_next+ " "+estadio_next+ " "+hora_next);
+            versus_next.setText(" X ");
         }
 
 
         Picasso.with(getActivity()).load(escudo_oficial_mandante_next).into(imageTime1_next);
         Picasso.with(getActivity()).load(escudo_oficial_visitante_next).into(imageTime2_next);
-        versus_next.setText(" X ");
+
     }
 
     private void FillCurrentMatch() {
@@ -300,16 +303,18 @@ public class JogosFragment extends Fragment {
             placar2_current.setText(placar_oficial_visitante_current);
         }
 
-        if(dataformatada_current==null){
+        if(dataformatada_current==null ){//&& estadio_current=="null"&& hora_current=="null"){
             informacoes_current.setText("");
+            versus_current.setText("");
         }
         else{
             informacoes_current.setText(dataformatada_current + " " + estadio_current + " " + hora_current);
+            versus_current.setText(" X ");
         }
 
         Picasso.with(getActivity()).load(escudo_oficial_mandante_current).into(imageTime1_current);
         Picasso.with(getActivity()).load(escudo_oficial_visitante_current).into(imageTime2_current);
-        versus_current.setText(" X ");
+
     }
 
     public static boolean isNetworkAvailable(Context context) {

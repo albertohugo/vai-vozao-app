@@ -34,12 +34,12 @@ import java.util.HashMap;
 import hugo.alberto.vai_vozao.Handler.JsonParseHandler;
 import hugo.alberto.vai_vozao.R;
 
-public class TabelaFragment extends Fragment {
+public class TabelaCearenseFragment extends Fragment {
 
     private ProgressDialog pDialog;
     private JsonParseHandler jsonParseHandler;
 
-    private static String url = "http://centraldejogos.lance.com.br/api/classificacao/brasileiro-serie-b-2015/";
+    private static String url = "https://vaivizaoapp.firebaseio.com/.json";
 
     private static final String TAG_CLASSIFICACAO= "posicao";
     private static final String TAG_CLUBE = "nome_equipe";
@@ -63,7 +63,7 @@ public class TabelaFragment extends Fragment {
         View rootView;
         if (isNetworkAvailable(getActivity())) {
         new GetTabela().execute();
-        rootView =  inflater.inflate(R.layout.tabela_tab, container, false);
+        rootView =  inflater.inflate(R.layout.paraense_tab, container, false);
 
             AdView mAdView_tabela = (AdView) rootView.findViewById(R.id.adView);
             AdRequest adRequest_tabela = new AdRequest.Builder().build();

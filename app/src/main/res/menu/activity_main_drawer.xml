@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/jogos" android:icon="@mipmap/ic_event_black_48dp"
+            android:title="Próximos Jogos" />
+        <item android:id="@+id/tabela" android:icon="@mipmap/ic_assessment_black_48dp"
+            android:title="Classificação Brasileirão" />
+        <item android:id="@+id/paraense" android:icon="@mipmap/ic_flag_black_48dp"
+            android:title="Classificação Cearense" />
+        <item android:id="@+id/noticias" android:icon="@mipmap/ic_library_books_black_48dp"
+            android:title="Notícias" />
+    </group>
+
+    <item android:title="Opções">
+        <menu>
+
+            <item android:id="@+id/share" android:icon="@mipmap/ic_share_black_48dp"
+                android:title="Compartilhe" />
+            <item android:id="@+id/more" android:icon="@mipmap/ic_favorite_black_48dp"
+                android:title="Mais aplicativos" />
+            <item android:id="@+id/send" android:icon="@mipmap/ic_help_black_48dp"
+                android:title="Ajuda e feedback" />
+        </menu>
+    </item>
+
+</menu>

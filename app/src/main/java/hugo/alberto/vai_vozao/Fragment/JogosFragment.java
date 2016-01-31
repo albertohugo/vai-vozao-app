@@ -248,7 +248,7 @@ public class JogosFragment extends Fragment {
         }
 
         if(dataformatada_last==null){
-            informacoes_current.setText("");
+            informacoes_last.setText("");
             versus_last.setText("");
         }
         else{
@@ -275,7 +275,7 @@ public class JogosFragment extends Fragment {
             placar2_next.setText(placar_oficial_visitante_next);
         }
         if(dataformatada_next==null){
-            informacoes_current.setText("");
+            informacoes_next.setText("");
         }
         else{
             informacoes_next.setText(dataformatada_next+ " "+estadio_next+ " "+hora_next);
